@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 const Advice = () => {
-  const [advice, setAdvice] = useState();
-  const [index, setIndex] = useState();
+  const [advice, setAdvice] = useState("Allah helps those, who help themselves.");
+  const [index, setIndex] = useState(786);
 
   const fetchAdvice = async () => {
     try {
@@ -19,24 +19,22 @@ const Advice = () => {
     }
   };
 
-  useEffect(() => {
-    fetchAdvice();
-  }, []);
-
   return (
-    <section className="relative w-full sm:w-96 bg-DarkGrayishBlue aspect-square rounded-xl p-8 text-center">
-      <h1 className="text-NeonGreen text-sm tracking-[4px]">ADVICE #{index}</h1>
-      <p className="text-quote text-LightCyan font-extrabold">{advice}</p>
-      <div>
-        <img
+    <section className="relative w-[346px] h-[315px] sm:w-[542px] sm:h-[335px] bg-DarkGrayishBlue rounded-xl pt-8 pb-12 px-8 sm:p-16 sm:pt-12 text-center flex flex-col drop-shadow-2xl">
+      <h1 className="text-NeonGreen text-sm tracking-[4px] font-bold">ADVICE #{index}</h1>
+      <div className="grow relative">
+        <p className="w-full text-quote text-LightCyan font-bold absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 before:content-[]">{advice}</p>
+      </div>
+      <div className="content-[url(./src/assets/pattern-divider-desktop.svg)] sm:content-[url(./src/assets/pattern-divider-mobile.svg)]">
+        {/* <img
           src="./src/assets/pattern-divider-mobile.svg"
           alt="Divider"
           className="my-4 mx-auto"
-        />
+        /> */}
       </div>
       <button
         onClick={fetchAdvice}
-        className=" p-4 bg-NeonGreen rounded-full absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%]"
+        className=" p-5 bg-NeonGreen rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 duration-150 ease-in-out hover:opacity-90"
       >
         <img src="./src/assets/icon-dice.svg" />
       </button>
