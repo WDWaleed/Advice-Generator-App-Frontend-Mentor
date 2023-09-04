@@ -36,7 +36,7 @@ const Advice = () => {
         onClick={fetchAdvice}
         className=" p-5 bg-NeonGreen rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 duration-150 ease-in-out hover:opacity-90"
       >
-        <img src="./src/assets/icon-dice.svg" />
+        <img src="../assets/icon-dice.svg" />
       </button>
     </section>
   );
