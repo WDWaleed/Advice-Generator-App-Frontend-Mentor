@@ -6,6 +6,7 @@ const Advice = () => {
     "Allah helps those, who help themselves."
   );
   const [index, setIndex] = useState(786);
+  
 
   const fetchAdvice = async () => {
     try {
@@ -34,11 +35,13 @@ const Advice = () => {
       <div className="content-[url(/public/images/pattern-divider-desktop.svg)] sm:content-[url(/public/images/pattern-divider-mobile.svg)]"></div>
       <button
         onClick={fetchAdvice}
-        className=" p-5 bg-NeonGreen rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 duration-150 ease-in-out hover:opacity-90"
+        id="fetch-advice"
+        className=" p-5 bg-NeonGreen rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300 ease-in-out"
       >
         <img src="/images/icon-dice.svg" alt="Show Advice" />
       </button>
     </section>
+    
   );
 };
 export default Advice;
