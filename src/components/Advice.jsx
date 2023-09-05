@@ -38,7 +38,7 @@ const Advice = () => {
         id="fetch-advice"
         className=" p-5 bg-NeonGreen rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300 ease-in-out"
       >
-        <img src="/images/icon-dice.svg" alt="Show Advice" />
+        <img src="images/icon-dice.svg" alt="Show Advice" />
       </button>
     </section>
     
